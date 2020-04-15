@@ -1,0 +1,46 @@
+.main {
+  overflow: hidden;
+  text-align: center;
+  height: 100%;
+  background: rgba(239, 239, 239, 0.91);
+
+  .main-header {
+    .main-form {
+      color: white;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .info {
+        background: #bfbfbf;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .text {
+          font-family: "Fira Code Medium";
+          padding: 5px;
+          font-palette: light;
+        }
+      }
+
+      .button {
+        background: #FF3C47;
+        border-radius: 0px;
+        color: white;
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .button-green {
+        background: #52dc6e;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  .time {
+    color: black;
+    font-size: 1rem;
+  }
+  .button {
+    color: black;
+    padding: 4px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-right: 4px;
+  }&:focus {
+    outline-width: 0;
+  }
+
+  .button-remove {
+    background: #ff9900;
+    padding-left: 8px;
+    padding-right: 8px;
+
+  }
+
+  .button-primary:hover {
+    background-color: #ff9900;
+    color:black
+  }
+
+  .button-primary-active {
+    font-family: "Fira Code Medium";
+    background-color: #1eec18;
+    color: black;
+  }
+
+  .button-primary-inactive {
+    font-family: "Fira Code Medium";
+    background-color: #747474;
+    color: white;
+  }
+
+}
