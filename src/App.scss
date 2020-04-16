@@ -1,30 +1,10 @@
 @import "styles/inputBar";
 @import "styles/timer";
 @import "styles/item";
+@import "styles/login";
+@import "styles/drawer";
 .App {
   overflow: hidden;
   text-align: center;
-  .login-header {
-    color: white;
-    height: 100px;
-    background: linear-gradient(rgb(201, 0, 255), rgb(93, 12, 184)) no-repeat;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .login-form {
-    padding: 16px;
-    .login-form-button {
-      width: 100%;
-    }
-    .ant-col-rtl {
-      float: left;
-    }
-    .login-form-forgot {
-      float: right;
-    }
-  }
 }
 

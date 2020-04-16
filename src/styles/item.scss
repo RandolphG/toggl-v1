@@ -1,10 +1,10 @@
 .motion-div {
+  padding-left: 8px;
+  padding-right: 8px;
   .list {
-    padding: 4px;
+    padding: 2px;
     .paper {
       .list-item {
-        borderLeft: deepPink 8px solid;
-        font-family: "Fira Code Medium";
         .list-details {
           display: flex;
           flex-grow: 1;
@@ -12,6 +12,8 @@
           align-items: center;
           justify-content: space-between;
           .list-info {
+            //noinspection CssNoGenericFontName
+            font-family: "Fira Code Medium";
             display: flex;
             flex-direction: column;
             margin-right: 8px;
@@ -26,9 +28,6 @@
           .time {
             display: flex;
             margin-right: 8px;
-          }
-          .list-item-icon {
-            background: darkorchid;
           }
         }
       }

@@ -6,6 +6,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   .time {
+    box-sizing: border-box;
     color: black;
     font-size: 1rem;
   }
@@ -22,26 +23,21 @@
 
   .button-remove {
     background: #ff9900;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 2px;
+    padding-right: 2px;
 
   }
 
   .button-primary:hover {
-    background-color: #ff9900;
-    color:black
+    color: #52dc6e;
   }
 
   .button-primary-active {
-    font-family: "Fira Code Medium";
-    background-color: #1eec18;
-    color: black;
+    color: #747474;
   }
 
   .button-primary-inactive {
-    font-family: "Fira Code Medium";
-    background-color: #747474;
-    color: white;
+    color: #747474;
   }
 
 }

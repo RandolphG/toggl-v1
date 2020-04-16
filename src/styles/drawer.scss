@@ -1,0 +1,51 @@
+.drawer {
+  .drawer-container {
+    border-right: #52dc6e 5px solid;
+    background: #333333;
+    width: 310px;
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    .drawer-header {
+      color: deeppink;
+      text-align: center;
+      //noinspection CssNoGenericFontName
+      font-family: "Fira Code Medium";
+      font-size: 1rem;
+      font-weight: 800;
+      padding-bottom: 8px;
+    }
+    .drawer-divider {
+      background: #bfbfbf;
+      height: 1px;
+    }
+    .drawer-list {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 16px;
+      align-items: baseline;
+      justify-content: flex-start;
+      .list-item {
+         .link{
+           color: #52dc6e;
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           justify-content: center;
+          .icon {
+            color: #bfbfbf;
+          }&:hover {
+           color: white;
+                     }
+        } &:hover {
+          background: #494949;
+          border-right:deeppink 4px solid;
+          border-radius: 3px;
+          color: #52dc6e;
+        }
+      }
+    }
+  }
+}

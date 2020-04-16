@@ -11,8 +11,29 @@ const variants = {
   exit: { opacity: 0, x: -30 },
 };
 
-function Item({ title, description, remove, idx }) {
-  console.log(idx);
+/**
+ * list item for timed events
+ * @param title
+ * @param description
+ * @param remove
+ * @param idx
+ * @param total
+ * @param setTotal
+ * @returns {*}
+ * @constructor
+ */
+function Item({
+  title,
+  description,
+  remove,
+  idx,
+  totalMilliSeconds,
+  setTotalMilliSeconds,
+  totalSeconds,
+  setTotalSeconds,
+  totalMinutes,
+  setTotalMinutes,
+}) {
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.div
@@ -32,7 +53,15 @@ function Item({ title, description, remove, idx }) {
                   <span className="description">{description}</span>
                 </div>
                 <span className="time">
-                  <Timer remove={remove} />
+                  <Timer
+                    remove={remove}
+                    totalMilliSeconds={totalMilliSeconds}
+                    setTotalMilliSeconds={setTotalMilliSeconds}
+                    totalSeconds={totalSeconds}
+                    setTotalSeconds={setTotalSeconds}
+                    totalMinutes={totalMinutes}
+                    setTotalMinutes={setTotalMinutes}
+                  />
                 </span>
               </div>
             </ListItem>

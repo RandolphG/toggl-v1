@@ -7,18 +7,6 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  text: {
-    padding: theme.spacing(2, 2, 0),
-  },
-  paper: {
-    paddingBottom: 50,
-  },
-  list: {
-    marginBottom: theme.spacing(2),
-  },
-  subheader: {
-    backgroundColor: theme.palette.background.paper,
-  },
   appBar: {
     background: "#333333",
     top: "auto",
@@ -27,24 +15,16 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
-  fabButton: {
-    position: "absolute",
-    zIndex: 1,
-    top: -30,
-    left: 0,
-    right: 0,
-    margin: "0 auto",
-  },
 }));
 
-function BottomAppBar() {
+function BottomAppBar({ toggleDrawer }) {
   const classes = useStyles();
 
   return (
     <AppBar position="fixed" color="primary" className={classes.appBar}>
       <Toolbar>
         <div className={classes.grow} />
-        <IconButton edge="end" color="inherit">
+        <IconButton edge="end" color="inherit" onClick={toggleDrawer(true)}>
           <MoreIcon />
         </IconButton>
       </Toolbar>

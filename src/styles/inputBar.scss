@@ -3,7 +3,6 @@
   text-align: center;
   height: 100%;
   background: rgba(239, 239, 239, 0.91);
-
   .main-header {
     .main-form {
       color: white;
@@ -13,6 +12,7 @@
       align-items: center;
 
       .info {
+        border-right: #333333 6px solid;
         background: #bfbfbf;
         width: 70%;
         height: 100%;
@@ -21,6 +21,7 @@
         justify-content: center;
 
         .text {
+          //noinspection CssNoGenericFontName
           font-family: "Fira Code Medium";
           padding: 5px;
           font-palette: light;
@@ -28,9 +29,9 @@
       }
 
       .button {
-        background: #FF3C47;
+        background: #52dc6e;
         border-radius: 0px;
-        color: white;
+        color: #333333;
         width: 30%;
         height: 100%;
         display: flex;
@@ -40,6 +41,41 @@
 
       .button-green {
         background: #52dc6e;
+      }
+    }
+
+    .details {
+      background: #333333;
+      color: white;
+      padding-left: 16px;
+      padding-right: 16px;
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: space-between;
+      .active {
+        .active-txt{
+          color:white;
+        }
+        .active-txt-zero {
+          color: red;
+        }
+        .number {
+          color: #52dc6e;
+          padding-left: 5px;
+        }
+      }
+
+      .total-time {
+        padding: 8px;
+        .total-txt{
+
+        }
+        .total-number{
+          padding-left: 5px;
+          color: #52dc6e;
+        }
       }
     }
   }
