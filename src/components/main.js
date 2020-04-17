@@ -83,11 +83,16 @@ export default function Main({ open, toggleDrawer }) {
   return (
     <AnimatePresence onExitComplete>
       <motion.div
+        key={"main"}
         initial={"initial"}
         animate={"animate"}
         exit={"exit"}
         variants={variants}
         className="main"
+        transition={{
+          x: { type: "spring", stiffness: 300, damping: 200 },
+          opacity: { duration: 0.2 },
+        }}
       >
         <InputBar
           onSubmit={onSubmit}

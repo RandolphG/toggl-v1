@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/login";
 import Main from "./components/main";
-import "./App.scss";
 import Drawer from "@material-ui/core/Drawer";
 import { List } from "@material-ui/core";
 import ListItem from "@material-ui/core/ListItem";

@@ -37,13 +37,6 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `scrollable-force-tab-${index}`,
-    "aria-controls": `scrollable-force-tabpanel-${index}`,
-  };
-}
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -66,6 +59,13 @@ function Login() {
     setTab(newValue);
   };
 
+  function a11yProps(index) {
+    return {
+      id: `scrollable-force-tab-${index}`,
+      "aria-controls": `scrollable-force-tabpanel-${index}`,
+    };
+  }
+
   /**
    *
    * @param data
@@ -74,15 +74,19 @@ function Login() {
     console.log(data);
   };
   return (
-    <div className="App">
-      <div className="login-header">toggl v0.1</div>
-      <div className={classes.root}>
-        <AnimatePresence exitBeforeEnter>
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-          >
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -30 }}
+        transition={{
+          x: { type: "spring", stiffness: 300, damping: 200 },
+          opacity: { duration: 0.2 },
+        }}
+      >
+        <div className="App">
+          <div className="login-header">toggl v0.1</div>
+          <div className={classes.root}>
             <AppBar position="static" color="default">
               <Tabs
                 value={value}
@@ -100,14 +104,7 @@ function Login() {
                 />
               </Tabs>
             </AppBar>
-          </motion.div>
-        </AnimatePresence>
-        <AnimatePresence exitBeforeEnter>
-          <motion.div
-            exit={{ opacity: 0, x: 30 }}
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
+
             <TabPanel value={value} index={0}>
               <form
                 style={{
@@ -153,36 +150,41 @@ function Login() {
                 </Button>
               </form>
             </TabPanel>
-          </motion.div>
-        </AnimatePresence>
-        <TabPanel value={value} index={1}>
-          <form className={classes.email} noValidate autoComplete="off">
-            <TextField
-              style={{ margin: "16px 0px" }}
-              id="standard-basic"
-              label="Email Address"
-            />
-            <TextField
-              style={{ margin: "16px 0px" }}
-              id="standard-basic"
-              label="Password"
-            />
-            <TextField
-              style={{ margin: "16px 0px" }}
-              id="standard-basic"
-              label="Confirm password"
-            />
-            <Button
-              style={{ background: "black", color: "white", marginTop: "56px" }}
-              variant="outlined"
-              size="large"
-            >
-              Register
-            </Button>
-          </form>
-        </TabPanel>
-      </div>
-    </div>
+
+            <TabPanel value={value} index={1}>
+              <form className={classes.email} noValidate autoComplete="off">
+                <TextField
+                  style={{ margin: "16px 0px" }}
+                  id="standard-basic"
+                  label="Email Address"
+                />
+                <TextField
+                  style={{ margin: "16px 0px" }}
+                  id="standard-basic"
+                  label="Password"
+                />
+                <TextField
+                  style={{ margin: "16px 0px" }}
+                  id="standard-basic"
+                  label="Confirm password"
+                />
+                <Button
+                  style={{
+                    background: "black",
+                    color: "white",
+                    marginTop: "56px",
+                  }}
+                  variant="outlined"
+                  size="large"
+                >
+                  Register
+                </Button>
+              </form>
+            </TabPanel>
+          </div>
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
