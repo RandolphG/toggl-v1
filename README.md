@@ -1,6 +1,6 @@
 # Toggle Remake
 
-![Toggle Remake](https://github.com/RandolphG/toggl-v1/blob/master/public/_toggl-v1.gif?raw=true)
+![Toggle Remake](https://github.com/RandolphG/toggl-v1/blob/master/public/_toggle-v1.gif?raw=true)
 
 ## Toggle Remake
 
